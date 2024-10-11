@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <h1>Switch</h1>
+
+    <hr />
+
+    <p>Escolha uma opção usando o teclado:</p>
+    <p>1 - Soma</p>
+    <p>2 - Subtração</p>
+    <p>3 - Divisão</p>
+    <p>4 - Multiplicação</p>
+
+    <script>
+      // Escuta o evento de teclado
+      document.addEventListener("keydown", function (event) {
+        // Converte o código da tecla para número
+        var opcao = Number(event.key);
+
+        // Verifica se a tecla pressionada é uma das opções (1 a 4)
+        if (opcao >= 1 && opcao <= 4) {
+          // Captura os dois números do usuário
+          var num1 = Number(prompt("Digite algum número:"));
+          var num2 = Number(prompt("Digite outro número:"));
+
+          // Switch para realizar a operação escolhida
+          switch (opcao) {
+            case 1:
+              document.write("<h1>Resultado da Operação</h1>");
+              document.write("<hr>");
+              document.write("A soma dos números é: " + Number(num1 + num2));
+              break;
+            case 2:
+              document.write("<h1>Resultado da Operação</h1>");
+              document.write("<hr>");
+              document.write(
+                "A subtração dos números é: " + Number(num1 - num2)
+              );
+              break;
+            case 3:
+              document.write("<h1>Resultado da Operação</h1>");
+              document.write("<hr>");
+              document.write("A divisão dos números é: " + Number(num1 / num2));
+              break;
+            case 4:
+              document.write("<h1>Resultado da Operação</h1>");
+              document.write("<hr>");
+              document.write(
+                "A multiplicação dos números é: " + Number(num1 * num2)
+              );
+          }
+        } else {
+            switch (opcao) {
+                default:
+                    alert('Opção inválida');
+                    break;
+            }
+        }
+      });
+    </script>
+  </body>
+</html>

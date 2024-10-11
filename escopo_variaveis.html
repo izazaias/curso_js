@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <h1>Escopo de variavéis</h1>
+
+    <hr />
+
+    <script>
+         // 3 escopos: global, função e o bloco
+
+         var serie = 'Friends';
+         var serie2 = 'Game of Thrones'
+
+         if(true) {
+          document.write(serie + '<br />');
+          document.write(serie2 + ' - Escopo bloco <br />');
+         }
+
+         document.write(serie2 + ' - Escopo global');
+         document.write('<br />');
+
+         function x() {
+          var serie3 = 'The Walking Dead'
+
+          document.write(serie2 + '<br />');
+          
+         document.write(serie3);
+         }
+
+         x();
+
+         
+         document.write(serie3);
+    </script>
+  </body>
+</html>

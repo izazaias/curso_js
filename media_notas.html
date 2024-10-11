@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Curso JavaScript</title>
+</head>
+<body>
+    <h1>Média de notas</h1>
+    <hr>
+
+    <script>
+        var nota1 = Number(prompt("Digite a 1ª nota:"));
+        var nota2 = Number(prompt("Digite a 2ª nota:"));
+        var nota3 = Number(prompt("Digite a 3ª nota:"));
+        var media_notas = 0;
+        var media = 7;
+
+        media_notas = (nota1 + nota2 +nota3) / 3;
+
+        document.write('<p>Nota 1: ' + nota1.toFixed(2) + ' </p>');
+        document.write('<p>Nota 2: ' + nota2.toFixed(2) + ' </p>');
+        document.write('<p>Nota 3: ' + nota3.toFixed(2) + ' </p>');
+
+        document.write('<hr>');
+
+        document.write('<h2>Como calcular sua média:</h2>');
+        document.write('<p><i>Média = (Nota 1 + Nota 2 + Nota 3) / Qtde. de notas</i></p>');
+
+        document.write('<hr>');
+        
+        document.write('<p>Sua média de notas é: ' + '<strong>' + media_notas.toFixed(2)+ '</strong>'+ ' </p>');
+
+        if(media_notas >= media) {
+            document.write('<p>Situação aluno: <strong>aprovado</strong>.</p>');
+        } else {
+            document.write('<p>Situação aluno: <strong>reprovado</strong>.</p>');
+        }
+    </script>
+</body>
+</html>

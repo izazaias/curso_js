@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+</head>
+<body>
+    <h1>Atividade de Fixação</h1>
+    <hr>
+
+    <script>
+        var idade = Number(prompt("Digite a sua idade:"));
+
+        if(idade >= 0 && idade < 15) {
+            document.write('Com base na sua idade você é uma: <b>Criança</b>');
+        } else if (idade >= 15 && idade < 30) {
+            document.write('Com base na sua idade você é um(a): <b>Jovem</b>');
+        } else if (idade >= 30 && idade < 60) {
+            document.write('Com base na sua idade você é um(a): <b>Adulto</b>');
+        } else {
+            document.write('Com base na sua idade você é um(a): <b>Idoso</b>');
+        }
+    </script>
+</body>
+</html>

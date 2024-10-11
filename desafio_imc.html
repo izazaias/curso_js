@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <h1>Calcule o seu IMC (Índice de Massa Corporal)</h1>
+
+    <hr />
+
+    <h2>Classificação do índice de massa corporal:</h2>
+
+    <p>Se IMC estiver abaixo de 16 : Baixo peso muito grave</p>
+    <p>Se IMC estiver entre 16 e 16.99: Baixo peso grave</p>
+    <p>Se IMC estiver entre 17 e 18.49: Baixo peso</p>
+    <p>Se IMC estiver entre 18.50 e 24.99: Peso normal</p>
+    <p>Se IMC estiver entre 25 e 29.99: Sobrepeso</p>
+    <p>Se IMC estiver entre 30 e 34.99: Obesidade grau I</p>
+    <p>Se IMC estiver entre 35 e 39.99: Obesidade grau II</p>
+    <p>Se IMC for maior que 40: Obesidade grau III</p>
+
+    <hr>
+    <br>
+
+
+    <script>
+      // Coletando entradas do usuário e armazenando informações em variavéis 
+      var nome = prompt('Qual o seu nome?');
+      var altura = parseFloat(prompt('Qual sua altura em centimetro? (Ex: 172.8)'));
+      var peso = parseFloat(prompt('Qual seu peso(quilos)? (Ex: 59.8)'));
+      // Variável para armazenar o cálculo da massa corporal
+      var imc = 0;
+
+      // Transformando a variável altura de centimetros para metros
+      altura /= 100;
+
+      // Cálculo para saber o IMC
+      imc = peso / (altura ** 2);
+
+      // Classificando os resultados do cálculo
+      if (imc < 16) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado, você está com <b>baixo peso</b> e isso é considerado muito grave pela OMS (Organização Mundial de Saúde).')
+
+      } else if (imc > 16 && imc <= 16.99) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado, você está com <b>baixo peso</b> e isso é considerado grave pela OMS (Organização Mundial de Saúde).')
+
+      } else if (imc > 16.99 && imc <= 18.49) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>baixo peso</b>.')
+
+      } else if (imc > 18.49 && imc <= 24.99) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>peso normal</b>.')
+
+      } else if (imc > 24.99 && imc <= 29.99) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>sobrepeso</b>.')
+
+      } else if (imc > 29.99 && imc <= 34.99) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>obesidade grau I</b>.')
+
+      } else if (imc > 34.99 && imc <= 39.99) {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>obesidade grau II</b>.')
+
+      } else {
+
+        document.write(nome + ' seu IMC é: '+ imc.toFixed(2) +' e com base nesse resultado a OMS (Organização Mundial de Saúde) classifica seu IMC como <b>obesidade grau III</b>.')
+
+      }
+
+
+
+    </script>
+  </body>
+</html>
