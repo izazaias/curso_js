@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso JavaScript</title>
+  </head>
+  <body>
+    <h1>Eventos Formulários</h1>
+
+    <hr />
+
+    <input onfocus="console.log('recebeu o foco')" onblur="console.log('perdeu o foco')" type="text">
+
+    <select onchange="console.log('Estado foi modificado')">
+      <option>-- Selecione --</option>
+      <option value="1">Primeira opção</option>
+      <option value="2">Segunda opção</option>
+    </select>
+
+    <script>
+      function acao1() {
+        console.log("Evento disparado!");
+      }
+    </script>
+  </body>
+</html>
